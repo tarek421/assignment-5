@@ -59,13 +59,13 @@ const renderFoodInfo = food => {
                 <img src='${food[0].strMealThumb}'>
                 <h4>${food[0].strMeal}</h4>
                 <ul>
-                    <li>${food[0].strMeasure1}+${food[0].strIngredient1}</li>
-                    <li>${food[0].strMeasure2}+${food[0].strIngredient2}</li>
-                    <li>${food[0].strMeasure3}+${food[0].strIngredient3}</li>
-                    <li>${food[0].strMeasure4}+${food[0].strIngredient4}</li>
-                    <li>${food[0].strMeasure5}+${food[0].strIngredient5}</li>
-                    <li>${food[0].strMeasure7}+${food[0].strIngredient7}</li>
-                    <li>${food[0].strMeasure8}+${food[0].strIngredient8}</li2
+                    <li>${food[0].strMeasure1} ${food[0].strIngredient1}</li>
+                    <li>${food[0].strMeasure2} ${food[0].strIngredient2}</li>
+                    <li>${food[0].strMeasure3} ${food[0].strIngredient3}</li>
+                    <li>${food[0].strMeasure4} ${food[0].strIngredient4}</li>
+                    <li>${food[0].strMeasure5} ${food[0].strIngredient5}</li>
+                    <li>${food[0].strMeasure7} ${food[0].strIngredient7}</li>
+                    <li>${food[0].strMeasure8} ${food[0].strIngredient8}</li2
                 </ul>
             `;
             foodItemDetail.innerHTML = foodInfo;
