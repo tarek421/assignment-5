@@ -3,9 +3,9 @@ const getInputData = food => {
     fetch(url)
         .then(response => response.json())
         .then(data => displayMeals(data))
-        // .catch((error) => {
-        //     console.error('Error:', alert('not found this item'));
-        // });
+        .catch((error) => {
+            console.error('Error:', alert('not found this item'));
+        });
 }
 
 const displayMeals = food => {
