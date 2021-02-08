@@ -24,7 +24,6 @@ const displayMeals = food => {
         `;
         mealsNewDiv.innerHTML = mealInfo;
         mealsDiv.appendChild(mealsNewDiv);
-        //console.log(foodItems);
     });
 
 }
@@ -32,7 +31,9 @@ const displayMeals = food => {
 const searchBtn = document.getElementById('search_button');
 searchBtn.addEventListener('click', () => {
     const inputFood = document.getElementById('input-food').value;
-    getInputData(inputFood);
+    if (inputFood.length > 0) {
+        getInputData(inputFood);
+    }
     document.getElementById('input-food').value = "";
 })
 
@@ -49,7 +50,7 @@ const foodDetailsBtn = name => {
 }
 
 const renderFoodInfo = food => {
-    console.log(food[0]);
+    document.getElementById('food_detail').innerHTML = "";
     const foodDetails = document.getElementById("food_detail");
     
         const foodItemDetail = document.createElement('div');
@@ -59,20 +60,17 @@ const renderFoodInfo = food => {
                 <img src='${food[0].strMealThumb}'>
                 <h4>${food[0].strMeal}</h4>
                 <ul>
-                    <li>${food[0].strMeasure1} ${food[0].strIngredient1}</li>
-                    <li>${food[0].strMeasure2} ${food[0].strIngredient2}</li>
-                    <li>${food[0].strMeasure3} ${food[0].strIngredient3}</li>
-                    <li>${food[0].strMeasure4} ${food[0].strIngredient4}</li>
-                    <li>${food[0].strMeasure5} ${food[0].strIngredient5}</li>
-                    <li>${food[0].strMeasure7} ${food[0].strIngredient7}</li>
-                    <li>${food[0].strMeasure8} ${food[0].strIngredient8}</li2
+                    <li>${'✅'} ${food[0].strMeasure1} ${food[0].strIngredient1}</li>
+                    <li>${'✅'} ${food[0].strMeasure2} ${food[0].strIngredient2}</li>
+                    <li>${'✅'} ${food[0].strMeasure3} ${food[0].strIngredient3}</li>
+                    <li>${'✅'} ${food[0].strMeasure4} ${food[0].strIngredient4}</li>
+                    <li>${'✅'} ${food[0].strMeasure5} ${food[0].strIngredient5}</li>
+                    <li>${'✅'} ${food[0].strMeasure7} ${food[0].strIngredient7}</li>
+                    <li>${'✅'} ${food[0].strMeasure8} ${food[0].strIngredient8}</li>
+                    <li>${'✅'} ${food[0].strMeasure9} ${food[0].strIngredient9}</li>
+                    <li>${'✅'} ${food[0].strMeasure10} ${food[0].strIngredient10}</li>
                 </ul>
             `;
             foodItemDetail.innerHTML = foodInfo;
-         foodDetails.appendChild(foodItemDetail);
+         foodDetails.appendChild(foodItemDetail); 
 }
-
-
-
-
-
